@@ -17,59 +17,62 @@
 </template>
 
 <script>
-    /*
-    import { emoji, formatNumber } from ‘../helpers’;
-    import echo from ‘../mixins/echo’;
-    import Tile from ‘./atoms/Tile’;
-    import saveState from ‘vue-save-state’;
+
+ //   import { emoji, formatNumber } from ‘../helpers’;
+  //  import echo from ‘../mixins/echo’;
+ //   import Tile from ‘./atoms/Tile’;
+ //   import saveState from ‘vue-save-state’;
 
     export default {
-        components: {
-            Tile,
+   //     components: {
+   //         Tile,
+    //    },
+
+   //     mixins: [echo, saveState],
+
+        props: ['position']
+    /*
+        data() {
+            return {
+                githubStars: 0,
+                githubIssues: 0,
+                githubPullRequests: 0,
+                githubContributors: 0,
+
+                packagistTotal: 0,
+                packagistMonthly: 0,
+            };
         },
 
-        mixins: [echo, saveState],
+        methods: {
+            emoji,
+                formatNumber,
 
-        props: [‘position’],
+                getEventHandlers() {
+                return {
+                   ‘Statistics.GitHubTotalsFetched’: response => {
+                    this.githubStars = response.stars;
+                    this.githubIssues = response.issues;
+                    this.githubPullRequests = response.pullRequests;
+                    this.githubContributors = response.contributors;
+                },
 
-    data() {
-        return {
-            githubStars: 0,
-            githubIssues: 0,
-            githubPullRequests: 0,
-            githubContributors: 0,
-
-            packagistTotal: 0,
-            packagistMonthly: 0,
-        };
-    },
-
-    methods: {
-        emoji,
-            formatNumber,
-
-            getEventHandlers() {
-            return {
-               ‘Statistics.GitHubTotalsFetched’: response => {
-                this.githubStars = response.stars;
-                this.githubIssues = response.issues;
-                this.githubPullRequests = response.pullRequests;
-                this.githubContributors = response.contributors;
+                   ‘Statistics.PackagistTotalsFetched’: response => {
+                    this.packagistTotal = response.total;
+                    this.packagistMonthly = response.monthly;
+                },
+            };
             },
 
-               ‘Statistics.PackagistTotalsFetched’: response => {
-                this.packagistTotal = response.total;
-                this.packagistMonthly = response.monthly;
+            getSaveStateConfig() {
+                return {
+                    cacheKey: ‘statistics’,
+            };
             },
-        };
         },
+        */
 
-        getSaveStateConfig() {
-            return {
-                cacheKey: ‘statistics’,
-        };
-        },
-    },
+
     };
-    */
+
 </script>
