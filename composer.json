@@ -1,0 +1,54 @@
+{
+    "name": "avito-dashboard/list-view",
+    "description": "Vypis dat z databaza",
+    "keywords": [
+        "avito-dashboard",
+        "list-view"
+    ],
+    "homepage": "https://github.com/avito-dashboard/list-view",
+    "license": "The Unlicense",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ladislav Melichar",
+            "email": "ladislav.melichar@avito.cz",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AvitoDashboard\\ListView\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AvitoDashboard\\ListView\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AvitoDashboard\\ListView\\ListViewServiceProvider"
+            ],
+            "aliases": {
+                "ListView": "AvitoDashboard\\ListView\\ListViewFacade"
+            }
+        }
+    }
+}
